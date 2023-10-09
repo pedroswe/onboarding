@@ -1,9 +1,6 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
 
-import org.example.Bill;
-import org.example.BillUtils;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

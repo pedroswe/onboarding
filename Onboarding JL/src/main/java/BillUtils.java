@@ -1,8 +1,8 @@
-package org.example;
+
 
 import java.math.BigDecimal;
 
-public class BillUtils {
+public final class BillUtils {
 
     /*
     In this exercise you have to create a type of class that is really common in OOP: a utility class.
@@ -14,14 +14,15 @@ public class BillUtils {
     Once everything is clear, you will have to:
 
     1. Build the utility class appropriately.
-    2. Implement different functions that perform operation with Bill objects.
+    2. Implement different functions that perform operation with org.example.Bill objects.
      */
 
     // TODO: Prevent this class from being instantiated - HINTS: Inheritance? Exposed constructors?
+    private BillUtils(){}
 
     // Useful documentation: https://www.educative.io/answers/how-to-enforce-non-instantiability-in-a-class-in-java
 
-    // TODO: Create a function that receives a Bill instance and returns the total amount of its products [ITERATIVE]
+    // TODO: Create a function that receives a org.example.Bill instance and returns the total amount of its products [ITERATIVE]
 
     public static BigDecimal calculateTotalAmountUsingIterativeModel(Bill bill) {
         BigDecimal res = new BigDecimal("0.0");
@@ -31,7 +32,7 @@ public class BillUtils {
         return res;
     }
 
-    // TODO: Create a function that receives a Bill instance and returns the total amount of its products [STREAMS]
+    // TODO: Create a function that receives a org.example.Bill instance and returns the total amount of its products [STREAMS]
 
     public static BigDecimal calculateTotalAmountUsingStreamsBasedModel(Bill bill) {
         return bill.getProducts().keySet()
@@ -40,7 +41,7 @@ public class BillUtils {
                 .reduce(new BigDecimal("0.0"), BigDecimal::add);
     }
 
-    // TODO: Create a function that receives a Bill instance and returns the number of products that start with the letter A [ITERATIVE]
+    // TODO: Create a function that receives a org.example.Bill instance and returns the number of products that start with the letter A [ITERATIVE]
 
     public static long calculateNumberOfProductsThatStartWithAUsingIterativeModel(Bill bill) {
         long res = 0;
@@ -52,7 +53,7 @@ public class BillUtils {
         return res;
     }
 
-    // TODO: Create a function that receives a Bill instance and returns the number of products that start with the letter A [ITERATIVE]
+    // TODO: Create a function that receives a org.example.Bill instance and returns the number of products that start with the letter A [ITERATIVE]
 
     public static long calculateNumberOfProductsThatStartWithAUsingStreamsBasedModel(Bill bill) {
         return bill.getProducts().keySet()
